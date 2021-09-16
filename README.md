@@ -8,7 +8,14 @@
   git clone https://github.com/robotech202122/vote.git
   ```
 
-3. 到 https://snapshot.page网站找到你要投票的代币对应的url，填写到代码的pages数组里
+3. 安装运行脚本需要的依赖包
+
+  ```
+  npm install
+  ```
+
+
+4. 到 https://snapshot.page 网站找到你要投票的代币对应的url，填写到代码的pages数组里
 
   ```
   const pages = [
@@ -52,7 +59,7 @@
 
   已有的代币如上所示，自行增减
 
-4. 配置好你使用代理的端口号（科学上网）
+5. 配置好你使用代理的端口号（科学上网）
 
   ```
   proxy: "http://127.0.0.1:8118",
@@ -60,14 +67,14 @@
 
   端口号8118按实际修改
 
-5. 如果你没有使用代理，跳过第4步，代码中做一下切换
+6. 如果你没有使用代理，跳过第4步，代码中做一下切换
 
   ```
   require("request").get(options, function (error, response, body) {
   // requestProxy.get(options, function (error, response, body) {
   ```
 
-6. 每隔2-3天运行一次脚本
+7. 每隔2-3天运行一次脚本
 
   ```
   node mainv2.js
